@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr 17 12:47:08 2024
+# Process ID: 16956
+# Current directory: C:/Users/nik/lab1/lab1.runs/synth_1
+# Command line: vivado.exe -log nexys_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys_adder.tcl
+# Log file: C:/Users/nik/lab1/lab1.runs/synth_1/nexys_adder.vds
+# Journal file: C:/Users/nik/lab1/lab1.runs/synth_1\vivado.jou
+# Running On: DESKTOP-HM761T7, OS: Windows, CPU Frequency: 2600 MHz, CPU Physical cores: 14, Host memory: 68616 MB
+#-----------------------------------------------------------
+source nexys_adder.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 484.070 ; gain = 178.609
+Command: read_checkpoint -auto_incremental -incremental C:/Users/nik/lab1/lab1.srcs/utils_1/imports/synth_1/fulladder4.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/nik/lab1/lab1.srcs/utils_1/imports/synth_1/fulladder4.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top nexys_adder -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10576
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1319.977 ; gain = 440.293
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'fulladder' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:11]
+INFO: [Synth 8-9937] previous definition of design element 'fulladder' is here [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:10]
+CRITICAL WARNING: [Synth 8-9873] overwriting previous definition of module 'fulladder4' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:56]
+INFO: [Synth 8-9937] previous definition of design element 'fulladder4' is here [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'nexys_adder' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:11]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'fulladder32' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'fulladder4' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'fulladder' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fulladder' (0#1) [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fulladder4' (0#1) [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder4.sv:15]
+INFO: [Synth 8-6155] done synthesizing module 'fulladder32' (0#1) [C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:58]
+ERROR: [Synth 8-11365] for the instance 'DUT' of module 'fulladder32' declared at 'C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:58', named port connection 'carry_i' does not exist [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:43]
+ERROR: [Synth 8-11365] for the instance 'DUT' of module 'fulladder32' declared at 'C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:58', named port connection 'sum_o' does not exist [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:45]
+ERROR: [Synth 8-11365] for the instance 'DUT' of module 'fulladder32' declared at 'C:/Users/nik/lab1/lab1.srcs/sources_1/new/fulladder32.sv:58', named port connection 'carry_o' does not exist [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:46]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:82]
+ERROR: [Synth 8-6156] failed synthesizing module 'nexys_adder' [C:/Users/nik/lab1/lab1.srcs/sources_1/new/nexys_adder.sv:11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1426.730 ; gain = 547.047
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 1 Warnings, 2 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 17 12:47:33 2024...
